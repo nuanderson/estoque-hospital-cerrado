@@ -87,16 +87,16 @@ Siga os passos abaixo para rodar o projeto em sua máquina.
 ## 🖼️ Screenshots
 
 Página Principal (Lista de Produtos)
-![alt text](\img\image.png)
+![alt text](/img/image.png)
 
 Página de Relatório de Balanço
-![alt text](\img\image-1.png)
+![alt text](/img/image-1.png)
 
 PDF gerado
-![alt text](\img\image-2.png)
+![alt text](/img/image-2.png)
 
 Página de Histórico de Movimentações
-![alt text](\img\image-3.png)
+![alt text](/img/image-3.png)
 
 ## 👨‍💻 Autor
 
