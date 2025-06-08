@@ -84,6 +84,19 @@ Siga os passos abaixo para rodar o projeto em sua máquina.
     ```
 8.  Abra seu navegador e acesse `http://127.0.0.1:8000/` para ver a aplicação funcionando.
 
+## 🖼️ Screenshots
+
+Página Principal (Lista de Produtos)
+![alt text](image.png)
+
+Página de Relatório de Balanço
+![alt text](image-1.png)
+
+PDF gerado
+![alt text](image-2.png)
+
+Página de Histórico de Movimentações
+![alt text](image-3.png)
 
 ## 👨‍💻 Autor
 
