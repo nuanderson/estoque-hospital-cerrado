@@ -1,0 +1,222 @@
+/* static/css/styles.css */
+
+/* Define as cores da logo como variáveis CSS para fácil reutilização */
+:root {
+    --cor-laranja: #E67E22;
+    --cor-amarelo: #F1C40F;
+    --cor-cinza-escuro: #343A40;
+    --cor-cinza-claro: #f8f9fa;
+    --cor-branco: #ffffff;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--cor-cinza-claro);
+    color: var(--cor-cinza-escuro);
+}
+
+.header {
+    /* Usamos o cinza claro que definimos para o fundo da página */
+    background-color: var(--cor-branco); /* Ou var(--cor-cinza-claro) */
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Adicionamos uma borda inferior para separar o header do conteúdo */
+    border-bottom: 2px solid var(--cor-amarelo); 
+}
+
+.header .logo img {
+    height: 60px; 
+    /* Removemos o filtro, pois não é mais necessário com fundo claro */
+    filter: none; 
+}
+
+.header .project-title {
+    font-family: 'Merriweather', serif; /* Fonte parecida com a da logo */
+    color: var(--cor-cinza-escuro);
+    font-size: 2.5em; /* Fonte maior */
+    font-weight: bold;
+    /* Adicionamos o alinhamento central */
+    text-align: center;
+    /* Flex-grow permite que o título ocupe o espaço disponível no centro */
+    flex-grow: 1;
+}
+
+.container {
+    padding: 2em;
+}
+
+h1 {
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Volta para a fonte padrão */
+    color: var(--cor-laranja);
+    border-bottom: 2px solid var(--cor-amarelo);
+    padding-bottom: 10px;
+    font-size: 1.8em; /* Tamanho original */
+    text-align: left; /* Alinhamento original */
+    width: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center; /* Centraliza o texto em TODAS as células */
+    vertical-align: middle; /* Alinha o conteúdo verticalmente ao meio */
+}
+
+thead th {
+    background-color: var(--cor-cinza-escuro);
+    color: var(--cor-branco);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--cor-branco);
+}
+
+tbody tr:hover {
+    background-color: #efefef;
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d35400; /* Um laranja um pouco mais escuro */
+}
+
+/* Para alinhar o H1 e o botão na mesma linha */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Título à esquerda, botões à direita */
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas pequenas */
+}
+
+/* Novo container apenas para os botões de navegação */
+.nav-buttons {
+    display: flex; /* Alinha os botões lado a lado */
+    gap: 10px; /* Cria um espaço de 10px ENTRE os botões */
+}
+
+/* Estilos para os campos do formulário */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+form p {
+    margin-bottom: 1rem;
+}
+
+/* static/css/styles.css */
+.btn-acao {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    background-color: #3498db; /* Azul */
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.btn-acao:hover {
+    background-color: #2980b9;
+}
+.produto-nome {
+    color: var(--cor-cinza-escuro);
+}
+.alert-danger {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* static/css/styles.css */
+.form-field {
+    margin-bottom: 1.2rem; /* Adiciona um espaço abaixo de cada campo */
+}
+
+/* Estilo para botões secundários, como o "Voltar" */
+.btn-secondary {
+    background-color: #6c757d; /* Um tom de cinza */
+    margin-right: 10px; /* Adiciona um espaço à direita, separando do botão principal */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Um cinza um pouco mais escuro */
+}
+
+/* Um container para alinhar os botões na mesma linha */
+.form-actions {
+    margin-top: 20px;
+}
+
+/* static/css/styles.css */
+.tipo-entrada {
+    color: #27ae60; /* Verde */
+    font-weight: bold;
+}
+.tipo-saida {
+    color: #c0392b; /* Vermelho */
+    font-weight: bold;
+}
+
+.btn-acao.btn-danger {
+    background-color: #dc3545; /* Vermelho */
+}
+
+.btn-acao.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Mantém a coluna do nome do produto alinhada à esquerda */
+.col-produto {
+    text-align: left;
+}
+
+/* Define uma largura menor para a coluna de quantidade */
+.col-quantidade {
+    width: 20%;
+}
+
+/* Define uma largura menor para a coluna de ações */
+.col-acoes {
+    width: 25%;
+}
+
+/* Centraliza os botões dentro da célula de ações */
+td .nav-buttons {
+    justify-content: center;
+}

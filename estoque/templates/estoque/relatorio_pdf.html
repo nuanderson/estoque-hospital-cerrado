@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Balanço de Estoque</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 10pt;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .col-contagem {
+            width: 25%;
+        }
+
+        .logo {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+        width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ logo_path }}">
+    </div>
+    <h1>Balanço de Estoque - Hospital do Cerrado</h1>
+    <p>Relatório gerado em: {{ now|date:"d/m/Y H:i" }}</p>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade (Sistema)</th>
+                <th class="col-contagem">Contagem Física</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos %}
+            <tr>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.quantidade }}</td>
+                <td class="col-contagem"></td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">Nenhum produto cadastrado.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

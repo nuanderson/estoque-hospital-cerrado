@@ -1,0 +1,27 @@
+{% extends 'estoque/base.html' %}
+
+{% block title %}
+
+Registrar Movimento - {{ produto.nome }}
+
+{% endblock %}
+
+{% block content %}
+    <h1>Registrar Movimento para: <span class="produto-nome">{{ produto.nome }}</span></h1>
+    <p><strong>Estoque Atual:</strong> {{ produto.quantidade }}</p>
+
+    {% if erro %}
+    <div class="alert alert-danger">{{ erro }}</div>
+    {% endif %}
+
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+
+    <div class="form-actions">
+        <a href="{% url 'lista_produtos' %}" class="btn btn-secondary">Voltar</a>
+        <button type="submit" class="btn">Confirmar Movimento</button>
+    </div>    
+    </form>
+{% endblock %}

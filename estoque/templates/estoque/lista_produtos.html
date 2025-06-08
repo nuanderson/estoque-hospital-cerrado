@@ -1,0 +1,44 @@
+{% extends 'estoque/base.html' %} 
+
+{% block title %}
+Lista de Produtos - Estoque HC
+{% endblock %}
+
+{% block content %} 
+    <div class="header-container">
+        <h1>Lista de Produtos no Estoque</h1>
+        <div class="nav-buttons">
+            <a href="{% url 'relatorio_historico' %}" class="btn btn-secondary">Histórico</a>
+            <a href="{% url 'relatorio_estoque' %}" class="btn btn-secondary">Balanço</a>
+            <a href="{% url 'adicionar_produto' %}" class="btn">Adicionar Produto</a>
+        </div>
+    </div>
+
+    <table>
+    <thead>
+        <tr>
+            <th class="col-produto">Produto</th>
+            <th class="col-quantidade">Quantidade em Estoque</th>
+            <th class="col-acoes">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+        <tr>
+            <td class="col-produto">{{ produto.nome }}</td>
+            <td class="col-quantidade">{{ produto.quantidade }}</td>
+            <td class="col-acoes">
+                <div class="nav-buttons">
+                    <a href="{% url 'registrar_movimento' produto.id %}" class="btn-acao">Movimentar</a>
+                    <a href="{% url 'excluir_produto' produto.id %}" class="btn-acao btn-danger">Excluir</a>
+                </div>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3" class="empty">Nenhum produto cadastrado ainda.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,31 @@
+/* static/css/print.css */
+
+/* Este CSS só é aplicado na hora de imprimir */
+@media print {
+
+    /* Esconde o header principal do site */
+    .header {
+        display: none;
+    }
+
+    /* Esconde o container do título da página e os botões */
+    .header-container {
+        display: none;
+    }
+
+    /* Garante que a tabela ocupe toda a largura */
+    table {
+        width: 100%;
+    }
+
+    /* Remove a sombra da tabela na impressão */
+    table, td, th {
+        box-shadow: none;
+        border-color: #000; /* Deixa a borda preta para melhor visibilidade */
+    }
+
+    /* Garante que o fundo seja branco */
+    body {
+        background-color: #fff;
+    }
+}

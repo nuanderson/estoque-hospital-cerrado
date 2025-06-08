@@ -1,0 +1,36 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/print.css' %}" media="print">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <title>{% block title %}Sistema de Estoque HC{% endblock %}</title>
+</head>
+<body>
+
+    <header class="header">
+        <div style="width: 200px;"> 
+            <a href="{% url 'lista_produtos' %}" class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="Logo Hospital do Cerrado">
+            </a>
+        </div>
+
+        <div class="project-title">
+            Controle de Estoque
+        </div>
+
+        <div style="width: 200px;"></div>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
