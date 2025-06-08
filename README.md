@@ -1,6 +1,6 @@
 # Sistema de Controle de Estoque - Hospital do Cerrado
 
-![Logo do Hospital do Cerrado](estoque_hc\static\img\logo.png)
+![Logo do Hospital do Cerrado](estoque_hc\img\logo.png)
 
 > **Status do Projeto:** Concluído ✔️
 
@@ -87,16 +87,16 @@ Siga os passos abaixo para rodar o projeto em sua máquina.
 ## 🖼️ Screenshots
 
 Página Principal (Lista de Produtos)
-![alt text](image.png)
+![alt text](/estoque_hc/img/image.png)
 
 Página de Relatório de Balanço
-![alt text](image-1.png)
+![alt text](/estoque_hc/img/image-1.png)
 
 PDF gerado
-![alt text](image-2.png)
+![alt text](/estoque_hc/img/image-2.png)
 
 Página de Histórico de Movimentações
-![alt text](image-3.png)
+![alt text](/estoque_hc/img/image-3.png)
 
 ## 👨‍💻 Autor
 
