@@ -1,6 +1,6 @@
 # Sistema de Controle de Estoque - Hospital do Cerrado
 
-![Logo do Hospital do Cerrado](https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/static/img/logo.png)
+![Logo do Hospital do Cerrado](estoque_hc\static\img\logo.png)
 
 > **Status do Projeto:** Concluído ✔️
 
